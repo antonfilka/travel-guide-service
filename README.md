@@ -30,4 +30,4 @@ Additional functionality:
 - Set marks on the map
 - Plot a route to destination
 
---feature/for-merge--
+--feature/lesson3--
