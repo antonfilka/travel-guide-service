@@ -8,6 +8,11 @@ public class TestMessage {
     public TestMessage() {
     }
 
+    public TestMessage(String text, String author) {
+        this.text = text;
+        this.author = author;
+    }
+
     public String getText() {
         return text;
     }
