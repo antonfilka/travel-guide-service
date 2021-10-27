@@ -26,7 +26,7 @@ It allows admins to:
 
 Additional functionality:
 
-- Add support of maps
+- Add support of map service
 - Set marks on the map
 - Plot a route to destination
 
