@@ -4,11 +4,13 @@ public class TestMessage {
 
     private String text;
     private String author;
+    private long id;
 
     public TestMessage() {
     }
 
-    public TestMessage(String text, String author) {
+    public TestMessage(long id, String text, String author) {
+        this.id = id;
         this.text = text;
         this.author = author;
     }
@@ -27,5 +29,13 @@ public class TestMessage {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
