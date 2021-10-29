@@ -30,4 +30,3 @@ Additional functionality:
 - Set marks on the map
 - Plot a route to destination
 
---Main branch--
