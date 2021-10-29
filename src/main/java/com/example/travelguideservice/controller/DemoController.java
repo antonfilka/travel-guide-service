@@ -27,10 +27,33 @@ public class DemoController {
                 : list;
     }
 
+//    @PostMapping("/add")
+//    public TestMessage CreateMessage(@RequestParam String text, @RequestParam String author){
+//        TestMessage message = new TestMessage(id++, text, author);
+//        list.add(message);
+//        return message;
+//    }
+
+
     @PostMapping("/add")
-    public TestMessage CreateMessage(@RequestParam String text, @RequestParam String author){
-        TestMessage message = new TestMessage(id++, text, author);
+    public TestMessage CreateMessage(@RequestBody TestMessage inputMessage){
+        TestMessage message = new TestMessage(id++, inputMessage.getText(), inputMessage.getAuthor());
         list.add(message);
+        return message;
+    }
+
+    @PostMapping("/remove/{id}")
+    public TestMessage RemoveMessage(@PathVariable("id") Long requestedID){
+        TestMessage message = list.stream().filter(item -> item.getId() == requestedID).findFirst().get();
+        list.remove(message);
+        return message;
+    }
+
+    @PostMapping("/update/{id}")
+    public TestMessage UpdateMessage(@PathVariable("id") Long requestedID, @RequestBody TestMessage inputMessage){
+        TestMessage message = list.stream().filter(item -> item.getId() == requestedID).findFirst().get();
+        message.setText(inputMessage.getText());
+        message.setAuthor(inputMessage.getAuthor());
         return message;
     }
 
