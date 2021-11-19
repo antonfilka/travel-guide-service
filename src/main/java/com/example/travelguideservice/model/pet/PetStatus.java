@@ -1,4 +1,7 @@
 package com.example.travelguideservice.model.pet;
 
-public class PetStatus {
+public enum PetStatus {
+    AVAILABLE,
+    PENDING,
+    SOLD
 }
