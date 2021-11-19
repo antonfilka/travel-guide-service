@@ -1,4 +1,4 @@
-package com.example.travelguideservice.model;
+package com.example.travelguideservice.model.demo;
 
 public class TestMessage {
 

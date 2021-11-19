@@ -1,7 +1,7 @@
-package com.example.travelguideservice.controller;
+package com.example.travelguideservice.controller.demo;
 
 
-import com.example.travelguideservice.model.TestMessage;
+import com.example.travelguideservice.model.demo.TestMessage;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
