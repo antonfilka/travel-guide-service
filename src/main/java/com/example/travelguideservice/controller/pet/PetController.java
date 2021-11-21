@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@RequestController
+@RestController
 @RequestMapping("/v2/pet")
 
 public class PetController {
@@ -31,13 +31,13 @@ public class PetController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping(value = "{petId}", produces = "application/json")
+    @DeleteMapping(value = "/{petId}", produces = "application/json")
     public ResponseEntity deletePet(@PathVariable Long petId){
         PetDto pet = pets.remove(petId);
         return ResponseEntity.ok(pet);
     }
 
-    @GetMapping (value = "{petId}", produces = "application/json")
+    @GetMapping (value = "/{petId}", produces = "application/json")
     public ResponseEntity getPetById(@PathVariable Long petID){
         PetDto pet = pets.get(petID);
         return ResponseEntity.ok(pet);
