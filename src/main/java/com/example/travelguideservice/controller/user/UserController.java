@@ -71,7 +71,7 @@ public class UserController {
         UserDto user = users.remove(username);
         return ResponseEntity.ok(user);
     }
-    
+
     private void saveUser(@RequestBody UserDto user) {
         long latestId = users.size();
         user.setId(latestId);
